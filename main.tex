@@ -1,0 +1,66 @@
+\documentclass[a4paper, 10pt]{article}
+% _________________________________________________
+
+\input{sections/options}
+
+% _________________________________________________
+\begin{document}
+
+% mets l'image de fond pouur avoir la colonne orange
+\tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{images/background_CV+.png}};
+
+\thispagestyle{empty} % efface la numéroation des pages
+\raggedright % met le texte sur la gauche avec retour à la ligne
+
+% _________________________________________________
+\columnratio{0.29}
+\begin{paracol}{2} % utiliser \switchcolumn pour changer de colonne (seulement à la fin sinon on peut faire des aller retours)
+\setlength{\columnsep}{30pt}
+
+%\input{sections/photo}
+
+% _________________________________________________
+\color{white} % debut de la colonne Orange
+
+\input{sections/infos_perso}
+
+\diviseur{white}
+
+\input{sections/Langues}
+
+\diviseur{white}
+
+\input{sections/Informatiques}
+
+\diviseur{white}
+
+\input{sections/Centres d'interet}
+
+% _________________________________________________
+\switchcolumn % colonnes blanche
+
+\input{sections/header}
+
+\diviseur{lightgray}
+
+%couleur de la description
+\color{myBlack}
+
+\input{sections/Formation}
+
+\diviseur{lightgray}
+
+\input{sections/exp_pro}
+
+\diviseur{lightgray}
+
+\input{sections/assos}
+
+\end{paracol}
+
+% _________________________________________________
+%page pour refs de recherche
+%ne pas oublier de changer mise en page dans les infos persos
+%\input{sections/recherche}
+
+\end{document}
