@@ -1,0 +1,61 @@
+
+\usepackage[default]{lato}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{geometry,parskip,color}
+\usepackage{paracol}
+\usepackage{ragged2e}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+% _________________________________________________
+% Organisation de la mise en page
+\geometry{
+a4paper,
+left = 3mm,
+right = 15mm,
+top = -5mm,
+bottom = -5mm
+}
+
+% _________________________________________________
+% variables
+
+\newcommand{\sizeletters}{10}
+\newcommand{\sizetitles}{16}
+\newcommand{\sizesubtitles}{12}
+\newcommand{\vspacing}{5mm}
+\newcommand{\hspacing}{2mm}
+% _________________________________________________
+%fonctions utiles
+
+% ecrit chiffres en romain
+\newcommand{\rom}[1]{\MakeUppercase{\romannumeral #1}}
+%diviseur
+\newcommand{\diviseur}[1]{
+    {\color{#1}
+    \vspace{-2mm}
+    \begin{center}
+        {\rule{0.8\linewidth}{0.5mm}}
+    \end{center}
+    \vspace{-3.5mm}
+    }
+}
+%bullet
+\newcommand{\squareBullet}[1]{
+    {\color{#1}
+    \tiny\ding{110}
+    }
+}
+
+% _________________________________________________
+%couleurs
+\definecolor{myOrange}{HTML}{DB8300}
+\definecolor{myBlack}{HTML}{333333}
+\definecolor{myGray}{HTML}{534B4F}
+
+%utilisation du gris en darkgray
