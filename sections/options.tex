@@ -16,11 +16,16 @@
 % Organisation de la mise en page
 \geometry{
 a4paper,
-left = 3mm,
-right = 15mm,
-top = -5mm,
+left = 0mm,
+right = 5mm,
+top = -8mm,
 bottom = -5mm
 }
+
+% Compression du fichier
+\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
 
 % _________________________________________________
 % variables
@@ -28,8 +33,9 @@ bottom = -5mm
 \newcommand{\sizeletters}{10}
 \newcommand{\sizetitles}{16}
 \newcommand{\sizesubtitles}{12}
-\newcommand{\vspacing}{5mm}
+\newcommand{\vspacing}{3mm}
 \newcommand{\hspacing}{2mm}
+
 % _________________________________________________
 %fonctions utiles
 
@@ -38,7 +44,7 @@ bottom = -5mm
 %diviseur
 \newcommand{\diviseur}[1]{
     {\color{#1}
-    \vspace{-2mm}
+    \vspace{-4mm}
     \begin{center}
         {\rule{0.8\linewidth}{0.5mm}}
     \end{center}
@@ -52,10 +58,22 @@ bottom = -5mm
     }
 }
 
+%two lines dates
+\newcommand{\filldate}[0]{
+    \hfill {\color{white}-}
+}
+
 % _________________________________________________
 %couleurs
 \definecolor{myOrange}{HTML}{DB8300}
 \definecolor{myBlack}{HTML}{333333}
 \definecolor{myGray}{HTML}{534B4F}
 
-%utilisation du gris en darkgray
+%ref avec des couleurs persos
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}
+
+% longueurs de la colonne de droite
+\newcommand{\dateCol}{2.3cm}
+\newcommand{\infoCol}{11cm}
+\newcommand{\descrSpacing}{0cm}
+\newcommand{\descrWidth}{14cm}
