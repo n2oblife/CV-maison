@@ -90,3 +90,14 @@ bottom = -5mm
   \str_case_e:nnF { #1 } { #3 } { #2 }
  }
 \ExplSyntaxOff
+
+\newcommand{\mynewpage}{
+% Pages pour ref de recherche
+\newpage
+
+% mets l'image de fond pouur avoir la colonne orange
+\tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{images/background_CV+.png}};
+
+\thispagestyle{empty} % efface la numéroation des pages
+\raggedright % met le texte sur la gauche avec retour à la ligne
+}
