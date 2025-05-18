@@ -80,6 +80,18 @@ bottom = -5mm
 \newcommand{\descrSpacing}{0cm}
 \newcommand{\descrWidth}{14cm}
 
+% saut de page
+\newcommand{\sautpage}{\mynewpage \vspace{0.5cm}}
+\newcommand{\fctsaut}[1]{
+    \ifnum #1=\sautdepagenumA
+        \sautpage 
+    \else
+        \ifnum #1=\sautdepagenumB
+            \sautpage
+        \fi
+    \fi
+    }
+
 \ExplSyntaxOn
 \NewExpandableDocumentCommand{\ifstringsequalTF}{mmmm}
  {

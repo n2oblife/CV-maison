@@ -3,11 +3,16 @@
 %     {\fontsize{36pt}{36pt}\selectfont Zaccarie Kanit}
 % \end{center}
 %\newcommand{\jobTitle}{an Engineer }
-\begin{center}
-    {\LARGE {\color{black}\textbf{Complete curriculum vitae}}}
-    % {\LARGE {\color{black}\textbf{M.Sc 2nd year  Student applying for the position of}}}
-\end{center}
-% \vspace{-2mm}
-% \begin{center}
-%     {\LARGE {\color{black}\textbf{\jobTitle starting March 2024}}}
-% \end{center}
+\if \jobTitle 0
+    \begin{center}
+        {\LARGE {\color{black}\textbf{Complete curriculum vitae}}}
+    \end{center}
+\else
+    \begin{center}
+        {\fontsize{16pt}{16pt} {\color{black}\textbf{M.Sc student applying for the \moreinfo position of}}}
+    \end{center}
+    \vspace{-2mm}
+    \begin{center}
+        {\fontsize{16pt}{16pt} {\color{black}\textbf{\jobTitle starting \starting}}}
+    \end{center}
+\fi
